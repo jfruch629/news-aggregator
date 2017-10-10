@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Slacker Articles - List of Articles</title>
+  <link rel="stylesheet" href="./stylesheets/server.css">
+</head>
+
+<body>
+  <h1> List Of Articles: </h1>
+  <ul>
+    <% @articles[1..-1].each do |article| %>
+      <li><a href="/articles/<%= article[0] %>"><%= article[0] %></a></li>
+    <% end %>
+  </ul>
+  <a href="/">Click Here To Return To The Homepage</a>
+</body>
+</html>
